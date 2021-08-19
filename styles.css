@@ -1,1 +1,222 @@
+/* fonts starts here  */
+.poppins-light {
+  font-weight: 300;
+  font-family: 'Poppins', sans-serif;
+}
+.poppins-medium {
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+
+.neue-regular {
+  font-weight: 400;
+  font-family: 'Bebas Neue', cursive;
+}
+/* font ends here */
 /* ______________ALL STYLE ARE WRITTEN HERE______ */
+
+/* +++++++++++++++++++++++++++++Intial setup starts here  */
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  margin: 0px;
+  padding: 0px;
+}
+:root {
+  --beforeHover: #dca97c;
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --red: red;
+  --green: green;
+  --bgImage: url('./assets/background/background.png');
+}
+/* ____________________________Initial setup ends here  */
+/* **************OUR REAL WORKS STARTS HERE****************** */
+/* =====================Body Styles============================= */
+/* setting up background image!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+body {
+  background-image: var(--bgImage);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 100%;
+}
+/* ===================== Navigation Styles ================== */
+/* alignment of items in navigation!!!!!!!!!!!!!!!!!!! */
+/* align all items inside left division horizontally */
+nav #left-division {
+  color: var(--white);
+
+  display: flex;
+}
+/* align all items inside right division horizontally */
+nav #right-division {
+  color: var(--white);
+  display: flex;
+}
+/* align all division inside container horizontally*/
+#container-containing-left_right-division {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+/* remove unwanted  Circle Symbols ◉  */
+header ul {
+  list-style-type: none;
+}
+/* now spacing betwn items of left division of navigation  */
+#logo {
+  margin: 0px 15px;
+  height: 65px;
+}
+nav {
+  /* background-color: var(--blue); */
+  padding: 20px 5px;
+}
+nav #left-division li {
+  /* background-color: var(--red); */
+  margin: 10px 10px;
+}
+nav #right-division li {
+  /* background-color: var(--green); */
+  margin: 10px 5px;
+}
+nav #right-division li:nth-child(1) {
+  /* color: red !important; */
+  margin-right: 40px;
+}
+nav li a {
+  /* background-color:var(--red); */
+  color: var(--beforeHover);
+  text-decoration: none;
+}
+nav li a:hover {
+  color: white;
+}
+nav li a img {
+  height: 25px;
+}
+/* ===================Navigation ends here========================== */
+/* ==========================HERO SECTION STARTS HERE  */
+#hero-section {
+  padding: 0px 0px 105px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+#hero-section .left-division img {
+  height: 560px;
+}
+#secondary-title {
+  font-size: 80px;
+  font-weight: bolder;
+}
+#hero-section .right-division {
+  padding-top: 65px;
+  /* padding-bottom: 65px; */
+}
+#hero-section .right-division h1 {
+  letter-spacing: 5px;
+  font-size: 90px;
+  color: white;
+}
+#hero-section .right-division h4 {
+  letter-spacing: 2px;
+  color: var(--beforeHover);
+  font-size: 30px;
+}
+#hero-section p {
+  margin-top: 25px;
+  font-size: 14px;
+  color: var(--beforeHover);
+  margin-bottom: 20px;
+  width: 420px;
+}
+#hero-section a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 20px;
+}
+
+#hero-section a:hover {
+  /* text-decoration: underline; */
+  border-bottom: 2px solid white;
+}
+#hero-section a .arrow {
+  height: 15px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+/* exceptional fix */
+#hero-section .right-division h1 {
+  line-height: 80px;
+}
+/* =========================================================OLD WAYS OF MAKING STUFFS RESPONSIVENESS=========================================================
+   */
+@media only screen and (max-width: 1175px) {
+  #hero-section .right-division h1 {
+    font-size: 60px;
+  }
+  #hero-section .right-division h4 {
+    letter-spacing: 2px;
+    font-size: 30px;
+  }
+  #hero-section p {
+    font-size: 12px;
+    width: 320px;
+  }
+  #hero-section a {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  /* #hero-section .left-division img {
+    height: 400px;
+  } */
+  /* * right division occupies full width  */
+  #hero-section .right-division {
+    width: 100vw;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+  }
+  /* * adapts desktop view font */
+  #hero-section .right-division h1 {
+    font-size: 90px;
+    /* !text align center */
+    text-align: center;
+  }
+  #hero-section .right-division h4 {
+    /* !text align center */
+    text-align: center;
+    font-size: 30px;
+  }
+  #hero-section p {
+    /* !text align center */
+    text-align: center;
+    font-size: 14px;
+  }
+  #hero-section a {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 671px) {
+  #hero-section .left-division img {
+    height: 300px;
+  }
+}
